@@ -1,0 +1,42 @@
+##spring:
+##  datasource:
+##    url: jdbc:oracle:thin:@localhost:1521/xe
+##    username: system
+##    password: root
+##    driver-class-name: oracle.jdbc.OracleDriver
+##    platform: org.hibernate.dialect.Oracle10gDialect
+#
+#---
+##spring:
+##  jpa:
+##    show-sql: true
+##    properties:
+##      hibernate.format_sql: true
+##
+server:
+  port: 8082
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+     
+spring:
+  application:
+    name: eureka_client_test
+  
+
+#      
+   
+#      
+#
+#    
+#    
